@@ -1,0 +1,9 @@
+numpy
+matplotlib
+
+nltk # предварительная обработка текста
+gensim # word2vec
+spacy #лематизация 
+
+pymorphy2 #
+natasha #
