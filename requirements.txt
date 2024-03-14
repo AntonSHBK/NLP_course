@@ -1,9 +1,25 @@
+# Common
 numpy
 matplotlib
+seaborn
 
+# NLP
 nltk # предварительная обработка текста
 gensim # word2vec
 spacy #лематизация 
 
+# Scikit-learn
+scikit-learn
+
+# Torch
+torch
+torchvision
+torchaudio
+
+# HuggingFace
+datasets
+
+# Other
+beautifulsoup4
 pymorphy2 #
 natasha #
