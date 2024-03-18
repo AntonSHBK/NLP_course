@@ -283,4 +283,3 @@ Word2Vec предоставил прорыв в области NLP, предло
 - [NLP — Преобразование текста: Word2Vec](https://habr.com/ru/companies/otus/articles/574624/)
 - [Word2Vec: как работать с векторными представлениями слов](https://neurohive.io/ru/osnovy-data-science/word2vec-vektornye-predstavlenija-slov-dlja-mashinnogo-obuchenija/)
 - [Word2Vec: покажи мне свой контекст, и я скажу, кто ты](https://sysblok.ru/knowhow/word2vec-pokazhi-mne-svoj-kontekst-i-ja-skazhu-kto-ty/)
-- [Negative sampling](https://medium.com/towards-datascience/word2vec-negative-sampling-made-easy-7a1a647e07a4)

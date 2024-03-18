@@ -15,6 +15,7 @@ scikit-learn
 torch
 torchvision
 torchaudio
+torchtext
 
 # HuggingFace
 datasets
@@ -23,3 +24,4 @@ datasets
 beautifulsoup4
 pymorphy2 #
 natasha #
+pytorch-crf
