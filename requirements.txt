@@ -3,6 +3,8 @@ numpy
 matplotlib
 seaborn
 
+python-dev
+
 # NLP
 nltk # предварительная обработка текста
 gensim # word2vec
@@ -25,3 +27,5 @@ beautifulsoup4
 pymorphy2 #
 natasha #
 pytorch-crf
+pymystem3
+pyLDAvis
