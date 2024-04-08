@@ -18,7 +18,7 @@ Video course Autumn:
 - [5 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/d6ed57bb-a97f-4c6b-a55d-64aea4b54d0a);
 - [6 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/f9d494e9-1ec4-4d35-897c-2142f36a7454);
 - []();
-- []();
+- [8 Lecture](https://www.youtube.com/watch?v=B17UT63YWZc&t=3s);
 - []();
 - []();
 
