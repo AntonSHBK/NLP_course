@@ -25,3 +25,11 @@ Video course Autumn:
 Data:
 * []()
 * []()
+
+
+
+
+[Latex devcontainer:](https://github.com/AntonSHBK/latex_docker_base)
+```
+git clone https://github.com/AntonSHBK/latex_docker_base
+```
