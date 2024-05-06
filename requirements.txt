@@ -29,3 +29,5 @@ natasha #
 pytorch-crf
 pymystem3
 pyLDAvis
+rouge
+pyyaml
