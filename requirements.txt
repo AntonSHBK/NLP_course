@@ -1,9 +1,9 @@
 # Common
 numpy
 matplotlib
-seaborn
+# seaborn
 
-python-dev
+# python-dev
 
 # NLP
 nltk # предварительная обработка текста
@@ -20,6 +20,7 @@ torchaudio
 torchtext
 
 # HuggingFace
+transformers
 datasets
 
 # Other
@@ -31,3 +32,5 @@ pymystem3
 pyLDAvis
 rouge
 pyyaml
+transformers
+openpyxl
