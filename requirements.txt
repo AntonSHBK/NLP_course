@@ -34,3 +34,4 @@ rouge
 pyyaml
 transformers
 openpyxl
+torchviz
