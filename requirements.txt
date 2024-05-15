@@ -1,14 +1,6 @@
-# Common
+# Math and plot
 numpy
 matplotlib
-# seaborn
-
-# python-dev
-
-# NLP
-nltk # предварительная обработка текста
-gensim # word2vec
-spacy #лематизация 
 
 # Scikit-learn
 scikit-learn
@@ -19,19 +11,26 @@ torchvision
 torchaudio
 torchtext
 
+# Torch CUDA
+# install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
 # HuggingFace
 transformers
 datasets
 
+# NLP
+nltk # предварительная обработка текста
+gensim # word2vec
+spacy #лематизация 
+pymorphy2
+natasha
+torchviz
+
 # Other
 beautifulsoup4
-pymorphy2 #
-natasha #
 pytorch-crf
 pymystem3
 pyLDAvis
 rouge
 pyyaml
-transformers
 openpyxl
-torchviz

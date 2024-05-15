@@ -31,6 +31,8 @@
 
 Ключевыми аспектами проекта являются подготовка и предобработка данных, обеспечивающие качественное обучение модели, включая кодирование типов сообщений и адаптацию модели для обработки конкретных запросов. Оценка качества генерируемых ответов осуществляется с помощью метрик BLEU, ROUGE и METEOR, которые позволяют количественно анализировать степень соответствия сгенерированных текстов эталонным ответам. Важной частью работы является также разработка и интеграция методов выбора следующего токена в процессе генерации текста, таких как argmax, top-k sampling и top-p (nucleus) sampling, каждый из которых предоставляет различные уровни разнообразия и предсказуемости текста.
 
+Ссылка на репозиторий: https://github.com/AntonSHBK/NLP_course
+
 <!-- Оценка эффективности предложенного подхода проводилась на основе сравнения результатов модели с эталонными ответами по критериям BLEU, ROUGE и METEOR. Было доказано, что модель эффективно адаптируется к задачам генерации текстов в контексте государственных услуг, показывая высокую степень соответствия с требованиями к качеству и релевантности ответов. Результаты тестирования подтвердили, что внедрение различных методов генерации текста значительно повышает качество и естественность сгенерированных ответов, обеспечивая при этом гибкость в управлении стилем и структурой ответов. Эти результаты подчеркивают потенциал применения передовых NLP-технологий для автоматизации и улучшения интерактивного взаимодействия между государством и гражданами. -->
 
 ## Введение
@@ -38,6 +40,8 @@
 Развитие ИИ оказало заметное влияние на многие аспекты жизни человека, предоставив возможности для улучшения качества и доступности услуг, ускорения и оптимизации процессов принятия решений и внедрения автоматизированных систем в различные сферы деятельности. Одной из ключевых областей, демонстрирующих потенциал ИИ, является NLP, технология, позволяющая машинам понимать, интерпретировать и генерировать человеческий язык в его естественной форме.
 
 Искусственный интеллект преобразует промышленность и социальные процессы, делая возможным автоматизацию задач, которые ранее требовали человеческого вмешательства. Это включает в себя такие области, как здравоохранение, где ИИ используется для диагностики заболеваний с высокой точностью, образование, где персонализированные учебные системы предлагают индивидуальные подходы к обучению, и транспорт, где автономные транспортные средства обещают сделать передвижение более безопасным и эффективным. Во всех этих случаях ИИ способствует повышению производительности, уменьшению ошибок и оптимизации ресурсов, что в конечном итоге ведет к более высокому качеству жизни и устойчивому развитию общества.
+
+## Обзор литературы
 
 Обработка естественного языка (NLP) в последние годы достигла значительных успехов благодаря развитию глубоких нейронных сетей и массовому накоплению текстовых данных. Современные NLP-системы способны не только анализировать тексты с точки зрения грамматики и синтаксиса, но и извлекать смысловые и эмоциональные составляющие, что делает их приложения чрезвычайно широкими [1]. Примеры включают автоматическую генерацию текстов, машинный перевод, создание чат-ботов для обслуживания клиентов и многое другое. Такие технологии, как трансформеры и предобученные модели вроде GPT [2] и BERT [3], значительно продвинули понимание и генерацию естественного языка, демонстрируя впечатляющие результаты в таких задачах, как ответы на вопросы, автоматическое резюмирование и персонализированная коммуникация.
 
@@ -49,8 +53,6 @@
 - **Автоматизация документооборота**: Преобразование неструктурированного текста в структурированную форму, автоматическая категоризация документов, что снижает ручной труд и повышает эффективность процессов.
 
 Интеграция ИИ и NLP в государственные структуры несет не только возможности, но и вызовы, особенно в области этики и защиты данных. Важно обеспечивать защиту личной информации, предотвращать предвзятость в алгоритмах и разрабатывать системы таким образом, чтобы они были понятны и прозрачны для граждан [8, 9].
-
-## Обзор литературы
 
 На текущий момент исследования в области генерации текстов для специфических задач продемонстрировали значительный прогресс благодаря развитию технологий машинного обучения, особенно глубокого обучения. Модели, основанные на архитектурах трансформеров, таких как GPT (Generative Pre-trained Transformer) [2] и BERT (Bidirectional Encoder Representations from Transformers) [3], выдвинулись на передний план в этой области. 
 
@@ -91,7 +93,7 @@
 В рамках данной работы представлена задача разработки и обучения модели генерации текста, которая автоматизирует процесс создания ответов от представителей государственных органов на обращения граждан. Центральной целью проекта является разработка системы, способной анализировать текстовые сообщения, поступающие от пользователей, и генерировать адекватные, информативные ответы, соответствующие заданным критериям качества и релевантности.
 
 Для достижения этой цели необходимо выполнить следующие задачи:
-1. **Определить архитектуру и конткретную базовую модель трансформера**, выбрав наиболее подходящую из доступных предобученных моделей, таких как GPT-2 или BERT, в зависимости от их способности к адаптации под специфические требования задачи.
+1. **Определить архитектуру и конткретную базовую модель трансформера**, выбрав наиболее подходящую из доступных предобученных моделей, в зависимости от их способности к адаптации под специфические требования задачи.
 2. **Модифицировать архитектуру для учета заданных параметров**, включая интеграцию дополнительных данных, таких как категория обращения или предыдущие взаимодействия пользователя с государственными службами, для повышения точности и персонализации ответов.
 3. **Формирование и описание набора данных**, который будет использоваться для обучения модели. Необходимо собрать, очистить и структурировать данные, состоящие из вопросов и ответов между гражданами и государственными учреждениями, учитывая различные аспекты, такие как тип сообщения, региональные особенности и предмет обращения. Данные должны быть размечены для обучения с учетом контекста и специфики задачи.
 4. **Установить и определить метрики для оценки адекватности генерирования текста**, а также разработать методику их применения для оценки как точности, так и естественности текстов.
@@ -335,261 +337,74 @@ $$ P(i) = \begin{cases}
 
 ## Анализ результатов
 
+
+
 ## Возникшие проблемы
+
+
 
 ## Дальнеишее направление развития исследований
 
 
+
 ## Источники
 
-1. @article{article,
-author = {Pais, Sebastião and Cordeiro, João and Jamil, M. Luqman},
-year = {2022},
-month = {04},
-pages = {},
-title = {NLP-based platform as a service: a brief review},
-volume = {9},
-journal = {Journal of Big Data},
-doi = {10.1186/s40537-022-00603-5}
-}
-2. @article{radford2018improving,
-  title={Improving Language Understanding by Generative Pre-training},
-  author={Radford, Alec and Narasimhan, Karthik and Salimans, Tim and Sutskever, Ilya},
-  journal={OpenAI Blog},
-  year={2018},
-  url={https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf}
-}
-3. @misc{devlin2019bert,
-      title={BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}, 
-      author={Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
-      year={2019},
-      eprint={1810.04805},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-4. @unknown{unknown,
-author = {Ferreira, Carlos},
-year = {2023},
-month = {07},
-pages = {},
-title = {A short review of the main concerns in A.I. development and application within the public sector supported by NLP and TM}
-}
-5. @misc{openai2024gpt4,
-      title={GPT-4 Technical Report}, 
-      author={OpenAI and Josh Achiam and Steven Adler and Sandhini Agarwal and Lama Ahmad and Ilge Akkaya and Florencia Leoni Aleman and Diogo Almeida and Janko Altenschmidt and Sam Altman and Shyamal Anadkat and Red Avila and Igor Babuschkin and Suchir Balaji and Valerie Balcom and Paul Baltescu and Haiming Bao and Mohammad Bavarian and Jeff Belgum and Irwan Bello and Jake Berdine and Gabriel Bernadett-Shapiro and Christopher Berner and Lenny Bogdonoff and Oleg Boiko and Madelaine Boyd and Anna-Luisa Brakman and Greg Brockman and Tim Brooks and Miles Brundage and Kevin Button and Trevor Cai and Rosie Campbell and Andrew Cann and Brittany Carey and Chelsea Carlson and Rory Carmichael and Brooke Chan and Che Chang and Fotis Chantzis and Derek Chen and Sully Chen and Ruby Chen and Jason Chen and Mark Chen and Ben Chess and Chester Cho and Casey Chu and Hyung Won Chung and Dave Cummings and Jeremiah Currier and Yunxing Dai and Cory Decareaux and Thomas Degry and Noah Deutsch and Damien Deville and Arka Dhar and David Dohan and Steve Dowling and Sheila Dunning and Adrien Ecoffet and Atty Eleti and Tyna Eloundou and David Farhi and Liam Fedus and Niko Felix and Simón Posada Fishman and Juston Forte and Isabella Fulford and Leo Gao and Elie Georges and Christian Gibson and Vik Goel and Tarun Gogineni and Gabriel Goh and Rapha Gontijo-Lopes and Jonathan Gordon and Morgan Grafstein and Scott Gray and Ryan Greene and Joshua Gross and Shixiang Shane Gu and Yufei Guo and Chris Hallacy and Jesse Han and Jeff Harris and Yuchen He and Mike Heaton and Johannes Heidecke and Chris Hesse and Alan Hickey and Wade Hickey and Peter Hoeschele and Brandon Houghton and Kenny Hsu and Shengli Hu and Xin Hu and Joost Huizinga and Shantanu Jain and Shawn Jain and Joanne Jang and Angela Jiang and Roger Jiang and Haozhun Jin and Denny Jin and Shino Jomoto and Billie Jonn and Heewoo Jun and Tomer Kaftan and Łukasz Kaiser and Ali Kamali and Ingmar Kanitscheider and Nitish Shirish Keskar and Tabarak Khan and Logan Kilpatrick and Jong Wook Kim and Christina Kim and Yongjik Kim and Jan Hendrik Kirchner and Jamie Kiros and Matt Knight and Daniel Kokotajlo and Łukasz Kondraciuk and Andrew Kondrich and Aris Konstantinidis and Kyle Kosic and Gretchen Krueger and Vishal Kuo and Michael Lampe and Ikai Lan and Teddy Lee and Jan Leike and Jade Leung and Daniel Levy and Chak Ming Li and Rachel Lim and Molly Lin and Stephanie Lin and Mateusz Litwin and Theresa Lopez and Ryan Lowe and Patricia Lue and Anna Makanju and Kim Malfacini and Sam Manning and Todor Markov and Yaniv Markovski and Bianca Martin and Katie Mayer and Andrew Mayne and Bob McGrew and Scott Mayer McKinney and Christine McLeavey and Paul McMillan and Jake McNeil and David Medina and Aalok Mehta and Jacob Menick and Luke Metz and Andrey Mishchenko and Pamela Mishkin and Vinnie Monaco and Evan Morikawa and Daniel Mossing and Tong Mu and Mira Murati and Oleg Murk and David Mély and Ashvin Nair and Reiichiro Nakano and Rajeev Nayak and Arvind Neelakantan and Richard Ngo and Hyeonwoo Noh and Long Ouyang and Cullen O'Keefe and Jakub Pachocki and Alex Paino and Joe Palermo and Ashley Pantuliano and Giambattista Parascandolo and Joel Parish and Emy Parparita and Alex Passos and Mikhail Pavlov and Andrew Peng and Adam Perelman and Filipe de Avila Belbute Peres and Michael Petrov and Henrique Ponde de Oliveira Pinto and Michael and Pokorny and Michelle Pokrass and Vitchyr H. Pong and Tolly Powell and Alethea Power and Boris Power and Elizabeth Proehl and Raul Puri and Alec Radford and Jack Rae and Aditya Ramesh and Cameron Raymond and Francis Real and Kendra Rimbach and Carl Ross and Bob Rotsted and Henri Roussez and Nick Ryder and Mario Saltarelli and Ted Sanders and Shibani Santurkar and Girish Sastry and Heather Schmidt and David Schnurr and John Schulman and Daniel Selsam and Kyla Sheppard and Toki Sherbakov and Jessica Shieh and Sarah Shoker and Pranav Shyam and Szymon Sidor and Eric Sigler and Maddie Simens and Jordan Sitkin and Katarina Slama and Ian Sohl and Benjamin Sokolowsky and Yang Song and Natalie Staudacher and Felipe Petroski Such and Natalie Summers and Ilya Sutskever and Jie Tang and Nikolas Tezak and Madeleine B. Thompson and Phil Tillet and Amin Tootoonchian and Elizabeth Tseng and Preston Tuggle and Nick Turley and Jerry Tworek and Juan Felipe Cerón Uribe and Andrea Vallone and Arun Vijayvergiya and Chelsea Voss and Carroll Wainwright and Justin Jay Wang and Alvin Wang and Ben Wang and Jonathan Ward and Jason Wei and CJ Weinmann and Akila Welihinda and Peter Welinder and Jiayi Weng and Lilian Weng and Matt Wiethoff and Dave Willner and Clemens Winter and Samuel Wolrich and Hannah Wong and Lauren Workman and Sherwin Wu and Jeff Wu and Michael Wu and Kai Xiao and Tao Xu and Sarah Yoo and Kevin Yu and Qiming Yuan and Wojciech Zaremba and Rowan Zellers and Chong Zhang and Marvin Zhang and Shengjia Zhao and Tianhao Zheng and Juntang Zhuang and William Zhuk and Barret Zoph},
-      year={2024},
-      eprint={2303.08774},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-6. @misc{zmitrovich2023family,
-      title={A Family of Pretrained Transformer Language Models for Russian}, 
-      author={Dmitry Zmitrovich and Alexander Abramov and Andrey Kalmykov and Maria Tikhonova and Ekaterina Taktasheva and Danil Astafurov and Mark Baushenko and Artem Snegirev and Tatiana Shavrina and Sergey Markov and Vladislav Mikhailov and Alena Fenogenova},
-      year={2023},
-      eprint={2309.10931},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-7. @misc{vaswani2023attention,
-      title={Attention Is All You Need}, 
-      author={Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
-      year={2023},
-      eprint={1706.03762},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-8. @misc{henderson2017ethical,
-      title={Ethical Challenges in Data-Driven Dialogue Systems}, 
-      author={Peter Henderson and Koustuv Sinha and Nicolas Angelard-Gontier and Nan Rosemary Ke and Genevieve Fried and Ryan Lowe and Joelle Pineau},
-      year={2017},
-      eprint={1711.09050},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-9. @misc{corbettdavies2023measure,
-      title={The Measure and Mismeasure of Fairness}, 
-      author={Sam Corbett-Davies and Johann D. Gaebler and Hamed Nilforoshan and Ravi Shroff and Sharad Goel},
-      year={2023},
-      eprint={1808.00023},
-      archivePrefix={arXiv},
-      primaryClass={cs.CY}
-}
-10. @misc{liu2019clinically,
-      title={Clinically Accurate Chest X-Ray Report Generation}, 
-      author={Guanxiong Liu and Tzu-Ming Harry Hsu and Matthew McDermott and Willie Boag and Wei-Hung Weng and Peter Szolovits and Marzyeh Ghassemi},
-      year={2019},
-      eprint={1904.02633},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-11. @misc{github2021copilot,
-  title={Introducing GitHub Copilot: your AI pair programmer},
-  author={GitHub},
-  year={2021},
-  howpublished={\url{https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/}},
-  note={Accessed: 2023-04-12}
-}
-12. @misc{keskar2019ctrl,
-      title={CTRL: A Conditional Transformer Language Model for Controllable Generation}, 
-      author={Nitish Shirish Keskar and Bryan McCann and Lav R. Varshney and Caiming Xiong and Richard Socher},
-      year={2019},
-      eprint={1909.05858},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-13. @misc{sanh2018hierarchical,
-      title={A Hierarchical Multi-task Approach for Learning Embeddings from Semantic Tasks}, 
-      author={Victor Sanh and Thomas Wolf and Sebastian Ruder},
-      year={2018},
-      eprint={1811.06031},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-14. @misc{wu2019enriching,
-      title={Enriching Pre-trained Language Model with Entity Information for Relation Classification}, 
-      author={Shanchan Wu and Yifan He},
-      year={2019},
-      eprint={1905.08284},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-15. @misc{martins2019joint,
-      title={Joint Learning of Named Entity Recognition and Entity Linking}, 
-      author={Pedro Henrique Martins and Zita Marinho and André F. T. Martins},
-      year={2019},
-      eprint={1907.08243},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-16. @inbook{inbook,
-author = {Reis, João and Espírito Santo, Paula and Melao, Nuno},
-year = {2019},
-month = {04},
-pages = {241-252},
-title = {Artificial Intelligence in Government Services: A Systematic Literature Review},
-isbn = {978-3-030-16180-4},
-doi = {10.1007/978-3-030-16181-1_23}
-}
-17. @inproceedings{inproceedings,
-author = {Liva, Giovanni and Codagnone, Cristiano and Misuraca, Gianluca and Gineikyte, Vaida and Barcevičius, Egidijus},
-year = {2020},
-month = {09},
-pages = {502-509},
-title = {Exploring digital government transformation: a literature review},
-doi = {10.1145/3428502.3428578}
-}
-18. @INPROCEEDINGS{8845234,
-author={Pokhrel, Shiva Raj and Sood, Keshav and Yu, Shui and Nosouhi, Mohammad Reza},
-booktitle={IEEE INFOCOM 2019 - IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}, 
-title={Policy-based Bigdata Security and QoS Framework for SDN/IoT: An Analytic Approach}, 
-year={2019},
-volume={},
-number={},
-pages={73-78},
-keywords={Security;Quality of service;Wireless fidelity;Microsoft Windows;Computer architecture;Analytical models;Routing;Bigdata;SDN networks;IoT;Security},
-doi={10.1109/INFCOMW.2019.8845234}
-}
-19. @misc{fenogenova2022russian,
-      title={Russian SuperGLUE 1.1: Revising the Lessons not Learned by Russian NLP models}, 
-      author={Alena Fenogenova and Maria Tikhonova and Vladislav Mikhailov and Tatiana Shavrina and Anton Emelyanov and Denis Shevelev and Alexandr Kukushkin and Valentin Malykh and Ekaterina Artemova},
-      year={2022},
-      eprint={2202.07791},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-20. @misc{pressmo2023,
-  author = {{Administration of the Governor and Government of Moscow Region}},
-  title = {Official VKontakte Account of the Administration of the Governor and Government of Moscow Region},
-  year = {2023},
-  howpublished = {\url{https://vk.com/pressmo}},
-  note = {Accessed: 2023-04-12}
-}
-21. @inproceedings{radford2019language,
-  title={Language Models are Unsupervised Multitask Learners},
-  author={Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya},
-  booktitle={OpenAI Blog},
-  year={2019},
-  url={https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf}
-}
+1. Pais, Sebastião; Cordeiro, João; Jamil, M. Luqman. "NLP-based platform as a service: a brief review." *Journal of Big Data*, vol. 9, 2022. DOI: 10.1186/s40537-022-00603-5.
 
-22. @misc{pytorch2019,
-  title={PyTorch: An Imperative Style, High-Performance Deep Learning Library},
-  author={Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and others},
-  booktitle={Advances in Neural Information Processing Systems},
-  volume={32},
-  year={2019},
-  publisher={Curran Associates, Inc.},
-  howpublished = {\url{https://pytorch.org}},
-  note = {Accessed: 2023-04-12}
-}
-23. @proceedings{ranlp-2021-deep,
-    title = "Proceedings of the International Conference on Recent Advances in Natural Language Processing (RANLP 2021)",
-    editor = "Mitkov, Ruslan  and
-      Angelova, Galia",
-    month = sep,
-    year = "2021",
-    address = "Held Online",
-    publisher = "INCOMA Ltd.",
-    url = "https://aclanthology.org/2021.ranlp-1.0",
-}
-24. @article{loshchilov2018decoupled,
-  title={Decoupled Weight Decay Regularization},
-  author={Loshchilov, Ilya and Hutter, Frank},
-  journal={arXiv preprint arXiv:1711.05101},
-  year={2018},
-  url={https://arxiv.org/abs/1711.05101}
-}
-25. @article{kingma2014adam,
-  title={Adam: A Method for Stochastic Optimization},
-  author={Kingma, Diederik P and Ba, Jimmy},
-  journal={arXiv preprint arXiv:1412.6980},
-  year={2014},
-  url={https://arxiv.org/abs/1412.6980}
-}
+2. Radford, Alec; Narasimhan, Karthik; Salimans, Tim; Sutskever, Ilya. "Improving Language Understanding by Generative Pre-training." *OpenAI Blog*, 2018. Available at: [https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf).
 
-26. @book{goodfellow2016deep,
-  title={Deep Learning},
-  author={Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
-  year={2016},
-  publisher={MIT Press},
-  url={http://www.deeplearningbook.org}
-}
+3. Devlin, Jacob; Chang, Ming-Wei; Lee, Kenton; Toutanova, Kristina. "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding." 2019. arXiv:1810.04805 [cs.CL].
 
-27. @inproceedings{papineni2002bleu,
-  title={BLEU: a method for automatic evaluation of machine translation},
-  author={Papineni, Kishore and Roukos, Salim and Ward, Todd and Zhu, Wei-Jing},
-  booktitle={Proceedings of the 40th annual meeting of the Association for Computational Linguistics},
-  pages={311--318},
-  year={2002},
-  organization={Association for Computational Linguistics}
-}
-28. @inproceedings{lin2004rouge,
-  title={ROUGE: A Package for Automatic Evaluation of Summaries},
-  author={Lin, Chin-Yew},
-  booktitle={Text summarization branches out},
-  pages={74--81},
-  year={2004},
-  organization={Association for Computational Linguistics}
-}
-29. @inproceedings{banerjee2005meteor,
-  title={METEOR: An automatic metric for MT evaluation with improved correlation with human judgments},
-  author={Banerjee, Satanjeev and Lavie, Alon},
-  booktitle={Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization},
-  pages={65--72},
-  year={2005},
-  organization={Association for Computational Linguistics}
-}
-30. @article{holtzman2019curious,
-  title={The Curious Case of Neural Text Degeneration},
-  author={Holtzman, Ari and Buys, Jan and Du, Li and Forbes, Maxwell and Choi, Yejin},
-  journal={arXiv preprint arXiv:1904.09751},
-  year={2019}
-}
+4. Ferreira, Carlos. "A short review of the main concerns in A.I. development and application within the public sector supported by NLP and TM." 2023.
 
-31. ff
-32. f
-33. f
-34. f
-35. f
-36. f
-37. f
+5. OpenAI and others. "GPT-4 Technical Report." 2024. arXiv:2303.08774 [cs.CL].
+
+6. Zmitrovich, Dmitry and others. "A Family of Pretrained Transformer Language Models for Russian." 2023. arXiv:2309.10931 [cs.CL].
+
+7. Vaswani, Ashish and others. "Attention Is All You Need." 2023. arXiv:1706.03762 [cs.CL].
+
+8. Henderson, Peter and others. "Ethical Challenges in Data-Driven Dialogue Systems." 2017. arXiv:1711.09050 [cs.CL].
+
+9. Corbett-Davies, Sam and others. "The Measure and Mismeasure of Fairness." 2023. arXiv:1808.00023 [cs.CY].
+
+10. Liu, Guanxiong and others. "Clinically Accurate Chest X-Ray Report Generation." 2019. arXiv:1904.02633 [cs.CV].
+
+11. GitHub. "Introducing GitHub Copilot: your AI pair programmer." 2021. Accessed: 2023-04-12. Available at: [https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/](https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/).
+
+12. Keskar, Nitish Shirish and others. "CTRL: A Conditional Transformer Language Model for Controllable Generation." 2019. arXiv:1909.05858 [cs.CL].
+
+13. Sanh, Victor; Wolf, Thomas; Ruder, Sebastian. "A Hierarchical Multi-task Approach for Learning Embeddings from Semantic Tasks." 2018. arXiv:1811.06031 [cs.CL].
+
+14. Wu, Shanchan; He, Yifan. "Enriching Pre-trained Language Model with Entity Information for Relation Classification." 2019. arXiv:1905.08284 [cs.CL].
+
+15. Martins, Pedro Henrique; Marinho, Zita; Martins, André F. T. "Joint Learning of Named Entity Recognition and Entity Linking." 2019. arXiv:1907.08243 [cs.CL].
+
+16. Reis, João; Espírito Santo, Paula; Melao, Nuno. "Artificial Intelligence in Government Services: A Systematic Literature Review." 2019. ISBN 978-3-030-16180-4. DOI: 10.1007/978-3-030-16181-1_23.
+
+17. Liva, Giovanni and others. "Exploring digital government transformation: a literature review." *Proceedings*, September 2020. DOI: 10.1145/3428502.3428578.
+
+18. Pokhrel, Shiva Raj and others. "Policy-based Bigdata Security and QoS Framework for SDN/IoT: An Analytic Approach." *IEEE INFOCOM 2019 - IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)*, 2019, pp. 73-78. DOI: 10.1109/INFCOMW.2019.8845234.
+
+19. Fenogenova, Alena and others. "Russian SuperGLUE 1.1: Revising the Lessons not Learned by Russian NLP models." 2022. arXiv:2202.07791 [cs.CL].
+
+20. Administration of the Governor and Government of Moscow Region. "Official VKontakte Account of the Administration of the Governor and Government of Moscow Region." 2023. Accessed: 2023-04-12. Available at: [https://vk.com/pressmo](https://vk.com/pressmo).
+
+21. Radford, Alec and others. "Language Models are Unsupervised Multitask Learners." *OpenAI Blog*, 2019. Available at: [https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf).
+
+22. Paszke, Adam and others. "PyTorch: An Imperative Style, High-Performance Deep Learning Library." *Advances in Neural Information Processing Systems*, vol. 32, 2019. Publisher: Curran Associates, Inc. Available at: [https://pytorch.org](https://pytorch.org).
+
+23. Mitkov, Ruslan and others, eds. "Proceedings of the International Conference on Recent Advances in Natural Language Processing (RANLP 2021)." Held online, September 2021. Publisher: INCOMA Ltd. Available at: [https://aclanthology.org/2021.ranlp-1.0](https://aclanthology.org/2021.ranlp-1.0).
+
+24. Loshchilov, Ilya; Hutter, Frank. "Decoupled Weight Decay Regularization." *arXiv preprint arXiv:1711.05101*, 2018. Available at: [https://arxiv.org/abs/1711.05101](https://arxiv.org/abs/1711.05101).
+
+25. Kingma, Diederik P.; Ba, Jimmy. "Adam: A Method for Stochastic Optimization." *arXiv preprint arXiv:1412.6980*, 2014. Available at: [https://arxiv.org/abs/1412.6980](https://arxiv.org/abs/1412.6980).
+
+26. Goodfellow, Ian; Bengio, Yoshua; Courville, Aaron. "Deep Learning." MIT Press, 2016. Available at: [http://www.deeplearningbook.org](http://www.deeplearningbook.org).
+
+27. Papineni, Kishore and others. "BLEU: a method for automatic evaluation of machine translation." *Proceedings of the 40th annual meeting of the Association for Computational Linguistics*, 2002, pp. 311–318.
+
+28. Lin, Chin-Yew. "ROUGE: A Package for Automatic Evaluation of Summaries." *Text summarization branches out*, 2004, pp. 74–81.
+
+29. Banerjee, Satanjeev; Lavie, Alon. "METEOR: An automatic metric for MT evaluation with improved correlation with human judgments." *Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization*, 2005, pp. 65–72.
+
+30. Holtzman, Ari and others. "The Curious Case of Neural Text Degeneration." *arXiv preprint arXiv:1904.09751*, 2019.
