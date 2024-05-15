@@ -3,3 +3,4 @@ seminars/data_ner
 other
 docs/latex
 **__pycache__
+.venv
