@@ -1,55 +1,9 @@
-# 1. NLP_course
-Description
-
-Создание виртуального окружения:
-```bush
-pip install virtualenv
-virtualenv .venv -p python3.10
-.venv\scripts\activate
-pip install -r requirements.txt
-```
-Альтернативный вариант:
-```bush
-python -m venv .venv
-```
-
-Если команда activate генерирует сообщение "Activate.ps1 не имеет цифровой подписи. Вы не можете запустить этот скрипт в текущей системе.", затем вам необходимо временно изменить политику выполнения PowerShell, чтобы разрешить запуск сценариев (см. О политиках выполнения в документации PowerShell):
-```bush
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-```
-
-установить права доступа для сценариев, указать Да
-```bush
-Set-ExecutionPolicy RemoteSigned
-```
-
-
-Video course Autumn:
-- [1 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/d43f510d-dda4-45fc-9460-28c23f0790f6);
-- [2 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/9e3cb83a-eac5-4da1-aa72-dbc3dfd78e9d);
-- [3 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/7b6bbe9b-3fdb-44ba-bca7-910f005e5a5a);
-- [4 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/51ea81de-102e-4288-ad08-8fca75b875d3);
-- [5 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/d6ed57bb-a97f-4c6b-a55d-64aea4b54d0a);
-- [6 Lecture](https://ods.ai/tracks/nlp-course-autumn-23/blocks/f9d494e9-1ec4-4d35-897c-2142f36a7454);
-- []();
-- [8 Lecture](https://www.youtube.com/watch?v=B17UT63YWZc&t=3s);
-- []();
-- []();
-
-Data:
-* []()
-* []()
-
-
-
-
-[Latex devcontainer:](https://github.com/AntonSHBK/latex_docker_base)
-```
-git clone https://github.com/AntonSHBK/latex_docker_base
-```
-
-
 # Ответы государственных органов на обращения граждан
+
+Работа является выполнена в рамках прохождения курса [Natural Language Processing course (stream 6, spring 2024)](https://ods.ai/tracks/nlp-course-spring-2024).
+
+- [Основной отчёт о ходе выполнения проекта в формате pdf](https://github.com/AntonSHBK/NLP_course/tree/main/docs)
+- [Директория проекта](https://github.com/AntonSHBK/NLP_course/tree/main/project)
 
 ## Цель проекта
 
@@ -64,20 +18,14 @@ git clone https://github.com/AntonSHBK/latex_docker_base
 - **Методы генерации**: Argmax, Temperature Sampling, Top-k Sampling, Top-p Sampling
 - **Основные метрики валидации**: BLEU, ROUGE, METEOR
 
-## Интерактивные элементы
+## Зависимости
 
-Для демонстрации работы модели предлагается интерактивный блок, где пользователи могут вводить свои запросы, и модель будет генерировать ответы в реальном времени.
+Для работы проекта требуется Python версии 3.10. Все необходимые библиотеки и их версии перечислены в файле `requirements.txt`, который можно использовать для установки зависимостей.
 
-```html
-<!-- Пример интерактивного блока для ввода запроса -->
-Введите ваш запрос:
-<input type="text" id="user_query">
-<button onclick="generateResponse()">Получить ответ</button>
-<div id="model_response"></div>
-<script>
-function generateResponse() {
-    const userQuery = document.getElementById('user_query').value;
-    // Здесь будет код для обращения к модели и получения ответа
-    document.getElementById('model_response').innerText = 'Здесь будет ответ модели...';
-}
-</script>
+### Установка зависимостей
+
+Для установки всех зависимостей выполните следующую команду в вашем терминале:
+
+```bash
+pip install -r requirements.txt
+```

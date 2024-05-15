@@ -1,0 +1,19 @@
+// Custom GPT-2 Model Architecture
+digraph {
+	Input [label="Input IDs"]
+	Emb [label="Token Embeddings (wte)"]
+	TypeEmb [label="Type Embeddings"]
+	Combine [label="Combined Embeddings"]
+	Lin [label="Linear Layer (combined_linear)"]
+	GPT2 [label="GPT-2 Processing"]
+	Head [label="Output Head (lm_head)"]
+	Logits [label=Logits]
+	Input -> Emb [label="token ids"]
+	Input -> TypeEmb [label="type ids"]
+	Emb -> Combine [label=embeddings]
+	TypeEmb -> Combine [label="type embeddings"]
+	Combine -> Lin [label="combined embeddings"]
+	Lin -> GPT2 [label="input to GPT-2"]
+	GPT2 -> Head [label="last hidden state"]
+	Head -> Logits [label="output logits"]
+}
