@@ -2,6 +2,7 @@
 
 Работа является выполнена в рамках прохождения курса [Natural Language Processing course (stream 6, spring 2024)](https://ods.ai/tracks/nlp-course-spring-2024).
 
+- [Jupyter notebook](project/gpt2_small.ipynb)
 - [Основной отчёт о ходе выполнения проекта в формате pdf](https://github.com/AntonSHBK/NLP_course/tree/main/docs)
 - [Директория проекта](https://github.com/AntonSHBK/NLP_course/tree/main/project)
 

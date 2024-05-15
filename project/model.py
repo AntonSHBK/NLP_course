@@ -47,7 +47,6 @@ class CustomGPT2Model(nn.Module):
 class Config:
     model_name = 'ai-forever/rugpt3small_based_on_gpt2'
     max_length = 64
-    temperature=0.7
     batch_size = 128
     test_size=0.1
     learning_rate = 1e-5
@@ -55,3 +54,7 @@ class Config:
     uniq_name = 'custom_gpt2_model'
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     special_eval = False
+    
+    temperature=0.7
+    top_k=11
+    top_p=0.9
