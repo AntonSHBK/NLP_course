@@ -47,8 +47,8 @@ class Trainer:
         self.optimizer = AdamW(model.parameters(), lr=learning_rate)
         self.criterion = CrossEntropyLoss()
         
-        # self.freeze_layers()
-        # self.print_freezed_layers()
+        self.freeze_layers()
+        self.print_freezed_layers()
 
     def train(self, train_loader: DataLoader):
         """
@@ -273,7 +273,7 @@ class Trainer:
                      fig_id=name)  # extra code
         plt.show()
             
-    def freeze_layers(self, num_trainable_blocks=2):        
+    def freeze_layers(self, num_trainable_blocks=1):        
         total_blocks = len(self.model.gpt2.h)  # h - это список всех блоков трансформера в модели GPT-2
 
         # Заморозка слоёв в начальных блоках
@@ -286,8 +286,11 @@ class Trainer:
                     param.requires_grad = True
 
         # # Если у вас есть другие специфические слои, которые нужно обучать, размораживаем их
-        # for param in model.combined_linear.parameters():
-        #     param.requires_grad = True
+        for param in self.model.combined_linear.parameters():
+            param.requires_grad = True
+        
+        for param in self.model.type_embedding.parameters():
+            param.requires_grad = True
     
     def print_freezed_layers(self):
         for name, param in self.model.named_parameters():
