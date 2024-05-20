@@ -3,7 +3,7 @@
 Работа является выполнена в рамках прохождения курса [Natural Language Processing course (stream 6, spring 2024)](https://ods.ai/tracks/nlp-course-spring-2024).
 
 - [Jupyter notebook](project/gpt2_small.ipynb)
-- [Основной отчёт о ходе выполнения проекта в формате pdf](https://github.com/AntonSHBK/NLP_course/tree/main/docs)
+- [Основной отчёт о ходе выполнения проекта в формате pdf](https://github.com/AntonSHBK/NLP_course/tree/main/docs/NLP_Course.pdf)
 - [Директория проекта](https://github.com/AntonSHBK/NLP_course/tree/main/project)
 
 ## Цель проекта
@@ -16,8 +16,16 @@
 
 ### Основные характеристики:
 - **Базовая модель**: GPT-2 (ai-forever/rugpt3small_based_on_gpt2)
-- **Методы генерации**: Argmax, Temperature Sampling, Top-k Sampling, Top-p Sampling
+- **Методы генерации**: Temperature Sampling, Top-k Sampling, Top-p Sampling
 - **Основные метрики валидации**: BLEU, ROUGE, METEOR
+
+### Описание похода:
+- [модель](project/model.py);
+- [тренер](project/trainer.py);
+- [метрики валидации](project/evaluator.py);
+- [датасет](project/custom_data.py);
+- [утилиты](project/utils.py).
+
 
 ## Зависимости
 
