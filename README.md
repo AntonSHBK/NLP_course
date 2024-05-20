@@ -19,7 +19,7 @@
 - **Методы генерации**: Temperature Sampling, Top-k Sampling, Top-p Sampling
 - **Основные метрики валидации**: BLEU, ROUGE, METEOR
 
-### Описание похода:
+### Описание проектируемых моделей:
 - [модель](project/model.py);
 - [тренер](project/trainer.py);
 - [метрики валидации](project/evaluator.py);
